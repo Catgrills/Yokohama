@@ -1,8 +1,12 @@
 # Yokohama
 
-<img src="preview.png" width="100%">
+<img src="preview_dark.png" width="100%">
 
-Preview of <i>Yokohama</i>.
+Preview of <i>Yokohama</i> (dark versop,).
+
+<img src="preview_light.png" width="100%">
+
+Preview of <i>Yokohama</i> (light version).
 
 About
 -------------------------------
