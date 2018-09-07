@@ -13,7 +13,7 @@ Preview of <i>Yokohama</i> (light version).
 About
 -------------------------------
 
-<i>Yokohama</i> is an userchrome for </i>Firefox Mozilla</i>.
+<i>Yokohama</i> is a userchrome for </i>Firefox Mozilla</i>.
 
 UserChrome are CSS file that can be used to change the way Mozilla applications' interfaces look. 
 
