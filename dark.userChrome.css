@@ -34,7 +34,7 @@
 	#downloads-indicator-anchor,
 	.toolbarbutton-1 > .toolbarbutton-icon, 
 	.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    	filter: brightness(1) invert(1) !important;
+		filter: brightness(1) invert(1) !important;
 	}
 
 	#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, 
@@ -63,6 +63,7 @@
 	#titlebar-min,
 	.titlebar-max,
 	#titlebar-max,
+	.titlebar-button.titlebar-restore,
 	.titlebar-placeholder[type="pre-tabs"],
 	.titlebar-spacer[type="pre-tabs"],
 	#tracking-protection-icon-container {
@@ -295,6 +296,13 @@
 		color: #FFF !important;
 	}
 
+	#urlbar-background {
+		background: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
+		outline: none !important;
+	}
+
 	.urlbar-textbox-container {
 
 		/*** NAVBAR URL BAR TEXT CONTAINER ***/
@@ -302,24 +310,28 @@
 		margin-left: 5px !important;
 	}
 
+	.urlbarView-body-inner {
+		border-top: 1px solid #000 !important;
+	}
+
 	moz-input-box.urlbar-input-box {
-    	padding-left: 7px !important;
+		padding-left: 7px !important;
 	}
 
 	.urlbarView {
 
 		/*** NAVBAR URL BAR DROP LIST ***/
-		background: #1B1B1D !important;
-		border-color: #000 !important;
+		background: transparent !important;
+		border-color: transparent !important;
 		color: #FFF !important;
 		font-size: 11pt !important;
 		margin-top: -1px !important;
 	}
 
-	:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
+	#PanelUI-button {
 
 		/*** NAVBAR PANEL BUTTON ***/
-		border-color: #000 !important;
+		border: none !important;
 		border-image: none !important;
 	}
 
@@ -327,7 +339,7 @@
 		filter: brigthness(1) invert(1) !important;
 	} 
 
-	/* FINDBAR */
+	/* FIND BAR */
 
 	/** DESCRIPTION : change the elements of the find bar **/
 	findbar {
