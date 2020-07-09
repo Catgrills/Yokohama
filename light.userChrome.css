@@ -34,7 +34,7 @@
 	#downloads-indicator-anchor,
 	.toolbarbutton-1 > .toolbarbutton-icon, 
 	.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    	filter: brightness(1) invert(0) !important;
+		filter: brightness(1) invert(0) !important;
 	}
 
 	#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, 
@@ -63,6 +63,7 @@
 	#titlebar-min,
 	.titlebar-max,
 	#titlebar-max,
+	.titlebar-button.titlebar-restore,
 	.titlebar-placeholder[type="pre-tabs"],
 	.titlebar-spacer[type="pre-tabs"],
 	#tracking-protection-icon-container {
@@ -295,6 +296,13 @@
 		color: #212121 !important;
 	}
 
+	#urlbar-background {
+		background: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
+		outline: none !important;
+	}
+
 	.urlbar-textbox-container {
 
 		/*** NAVBAR URL BAR TEXT CONTAINER ***/
@@ -309,17 +317,17 @@
 	.urlbarView {
 
 		/*** NAVBAR URL BAR DROP LIST ***/
-		background: #F9F9FA !important;
-		border-color: #E1E1E2 !important;
+		background: transparent !important;
+		border-color: transparent !important;
 		color: #212121 !important;
 		font-size: 11pt !important;
 		margin-top: -1px !important;
 	}
 
-	:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
+	#PanelUI-button {
 
 		/*** NAVBAR PANEL BUTTON ***/
-		border-color: #E1E1E2 !important;
+		border: none !important;
 		border-image: none !important;
 	}
 
