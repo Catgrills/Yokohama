@@ -34,7 +34,7 @@
 	#downloads-indicator-anchor,
 	.toolbarbutton-1 > .toolbarbutton-icon, 
 	.toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
-    	filter: brightness(1) var(--invert) !important;
+    	filter: brightness(1) invert(1) !important;
 	}
 
 	#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, 
@@ -59,9 +59,13 @@
 	.tabs-newtab-button,
 	#TabsToolbar .tabbrowser-tab:after,
 	#TabsToolbar .tabbrowser-tab:before,
+	.titlebar-min,
 	#titlebar-min,
+	.titlebar-max,
 	#titlebar-max,
-	.titlebar-placeholder[type="pre-tabs"] {
+	.titlebar-placeholder[type="pre-tabs"],
+	.titlebar-spacer[type="pre-tabs"],
+	#tracking-protection-icon-container {
 		display: none !important;
 	}
 
@@ -79,7 +83,7 @@
 	popup,
 	popup > menu > menupopup {
 		-moz-appearance: none !important;
-		background: var(--nav-bg) !important;
+		background: #1B1B1D !important;
 		border: none !important;
 	}
 
@@ -93,7 +97,7 @@
 	menuitem,
 	menupopup menu {
 		-moz-appearance: none !important;
-		color: var(--primary-color)!important
+		color: #FFF !important
 	}
 
 	menupopup menuseparator {
@@ -104,8 +108,8 @@
 
 	#context-navigation menuitem,
 	.panel-arrowcontent {
-		background-color: var(--nav-bg) !important;
-		color: var(--primary-color) !important;
+		background-color: #1B1B1D !important;
+		color: #FFF !important;
 		padding-bottom: 10px !important;
 	}
 
@@ -119,7 +123,7 @@
 	/** DESCRIPTION : change the elements in the toolbar **/
 	#navigator-toolbox {
 		/*** TOOLBAR TOOLBOX ***/
-		background: var(--nav-bg) !important;
+		background: #1B1B1D !important;
 	}
 
 	#navigator-toolbox > toolbar {
@@ -127,13 +131,13 @@
 	}
 
 	#navigator-toolbox toolbar #menubar-items {
-	    margin-top: 10px !important;
-	    margin-bottom: 10px !important;
-	    margin-left: 10px !important;
+		margin-top: 10px !important;
+		margin-bottom: 10px !important;
+		margin-left: 10px !important;
 	}
 
 	#navigator-toolbox toolbar #menubar-items * {
-		color: var(--primary-color);
+		color: #FFF;
 		font-size: 10pt !important;
 	}
 
@@ -141,8 +145,8 @@
 
 	/** DESCRIPTION : change the elements of the personal toolbar **/
 	#PersonalToolbar {
-	    height: 40px !important;
-	    padding-top: 2px !important;	
+		height: 40px !important;
+		padding-top: 2px !important;	
 	}
 
 	/* TABBAR */
@@ -151,44 +155,44 @@
 
 	#TabsToolbar {
 		/*** TABBAR TOOLBAR ***/
-		background: var(--tool-bg) !important;
-		border-top: 1px solid var(--border-color) !important;
-		border-bottom: 1px solid var(--border-color) !important;
+		background: #242425 !important;
+		border-top: 1px solid #000 !important;
+		border-bottom: 1px solid #000 !important;
 		margin-bottom: 0 !important;
 	} 
 
 	.tabbrowser-tab {
 
 		/*** TABBAR TABS ***/
-		background: var(--tab-bg) !important;
-		border-right: 1px solid var(--border-color) !important;
-		color: var(--primary-color) !important;
-		transition: all 0.3s ease-in-out;
-	}
-
-	.tabbrowser-tab:hover {
-		transition: none !important;
+		background: #222225 !important;
+		border-right: 1px solid #000 !important;
+		color: #FFF !important;
 	}
 
 	.tab-background[selected="true"] {
 
 		/*** TABBAR TABS SELECTED ***/
-		background: var(--tab-bg-select) !important;
+		background: #2A2A2E !important;
 		height: 50px !important;
 		margin-top: -3px !important;
 	}
 
-	:root:not([uidensity="compact"]) .tab-content[pinned] {
+	.tab-content[pinned] {
 
 		/*** TABBAR TABS PINNED ***/
-	    padding: 0 17px !important;
+		width: 52px !important;
+		text-indent: 20px !important;
+	}
+
+	.tab-content[pinned] .tab-icon-image {
+		margin-left: 5px !important;
 	}
 
 	.tab-label-container {
 
 		/*** TABBAR TABS CONTENT ***/
-	    font-size: 10pt !important;
-	    padding-left: 5px !important;
+		font-size: 10pt !important;
+		padding-left: 5px !important;
 	}
 
 	#tabbrowser-tabs .tab-close-button {
@@ -201,7 +205,7 @@
 		padding: 10px 0 0 20px !important;
 		opacity: .7 !important;
 		margin-right: 5px !important;
-		filter: brightness(0) var(--invert) !important;
+		filter: brightness(0) invert(1) !important;
 	}
 
 	#tabbrowser-tabs .tab-close-button:hover {
@@ -211,12 +215,14 @@
 		opacity: .5 !important;
 	}
 
+	.titlebar-close,
 	#titlebar-close {
 
 		/*** TABBAR CLOSE BUTTON ***/
 		list-style-image: url("https://i.imgur.com/qzZ5RJH.png") !important;
 	}
 
+	.titlebar-close:hover,
 	#titlebar-close:hover {
 		background-color: transparent !important;
 		opacity: .5 !important;
@@ -231,13 +237,13 @@
 
 	/** DESCRIPTION : change the elements of the navbar **/
 	#nav-bar {
-		border-bottom: 1px solid var(--border-color) !important;
+		border-bottom: 1px solid #000 !important;
 		margin-bottom: -1px !important;
 	}
 	
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-		background: var(--nav-bg) !important;
-		border-color: var(--border-color) !important;
+		background: #1B1B1D !important;
+		border-color: #000 !important;
 	}
 
 	#nav-bar #back-button > .toolbarbutton-icon {
@@ -276,111 +282,113 @@
 		margin-top: 0px !important;
 		margin-right: 0px;
 		margin-left: -10px !important;
-		filter: brightness(0) var(--invert) !important;
+		filter: brightness(0) invert(1) !important;
 	}
 
 	#searchbar > .searchbar-textbox,
 	#urlbar {
 
 		/*** NAVBAR URL BAR ***/
-	    background: var(--url-bg) !important;
-	    border: 1px solid var(--border-color-2) !important;
-	    box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
-	    color: var(--primary-color) !important;
+		background: #2A2A2E !important;
+		border: 1px solid #111 !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		color: #FFF !important;
 	}
 
 	.urlbar-textbox-container {
 
 		/*** NAVBAR URL BAR TEXT CONTAINER ***/
-	    margin-top: -1px !important;
-	    margin-left: 5px !important;
+		margin-top: -1px !important;
+		margin-left: 5px !important;
 	}
 
-	#PopupAutoCompleteRichResult {
+	moz-input-box.urlbar-input-box {
+    	padding-left: 7px !important;
+	}
+
+	.urlbarView {
 
 		/*** NAVBAR URL BAR DROP LIST ***/
-		border: 1px solid var(--border-color) !important;
+		background: #1B1B1D !important;
+		border-color: #000 !important;
+		color: #FFF !important;
+		font-size: 11pt !important;
 		margin-top: -1px !important;
-	}
-
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox {
-		background: var(--nav-bg) !important;
-		color: var(--primary-color) !important;
-	}
-
-	#PopupAutoCompleteRichResult .autocomplete-richlistbox * {
-		font-size: 10pt !important;
 	}
 
 	:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
 
 		/*** NAVBAR PANEL BUTTON ***/
-		border-color: var(--border-color) !important;
+		border-color: #000 !important;
 		border-image: none !important;
 	}
 
 	:root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button #PanelUI-menu-button {
-		filter: brigthness(1) var(--invert) !important;
+		filter: brigthness(1) invert(1) !important;
 	} 
 
-	/* FIND BAR */
+	/* FINDBAR */
 
 	/** DESCRIPTION : change the elements of the find bar **/
 	findbar {
-	    background: var(--nav-bg) !important;
-	    border-color: var(--border-color) !important;
-	    color: var(--primary-color) !important;
-	    font-size: 10pt !important;
+		background: #1B1B1D !important;
+		border-color: #000 !important;
+		color: #FFF !important;
+		font-size: 10pt !important;
 	}
 
 	.findbar-textbox,
 	.findbar-find-previous, 
 	.findbar-find-next {
-	    background: var(--url-bg) !important;
-	    border-color: var(--border-color-2) !important;
-	    color: var(--primary-color) !important;
+		background: #2A2A2E !important;
+		border-color: #111 !important;
+		color: #FFF !important;
 	}
 
 	.findbar-button:not([disabled="true"]):-moz-any([checked="true"], 
 	:hover:active) > .toolbarbutton-text {
-	 	background: var(--focus-bg) !important;
+	 	background: #000 !important;
 	}
 
 	/* HISTORY */
 
 	/** DESCRIPTION : change the elements of the history sidebar **/
+	#browser {
+		--sidebar-border-color: #000 !important;
+	}
+
 	#sidebar-box {
-	    background-color: var(--nav-bg) !important;
+		background-color: #1B1B1D !important;
 	}
 
 	hbox#sidebar-search-container textbox#search-box {
   		-moz-appearance: none!important;
-		background-color: var(--tab-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		color: var(--primary-color) !important;
+		background-color: #222225 !important;
+		border: 1px solid #000 !important;
+		color: #FFF !important;
 		font-size: 10pt !important;
 	}
 
 	.sidebar-placesTreechildren,
 	#viewButton {
-	    color: var(--primary-color) !important;
-	    font-size: 10pt !important;
+		color: #FFF !important;
+		font-size: 10pt !important;
 	}
 
 	.sidebar-placesTreechildren:hover {
-		background: var(--tab-bg) !important;
+		background: #222225 !important;
 	}
 
 	/* CUSTOMIZATION */
 
 	/** DESCRIPTION : change the elements of the customization page **/
 	#customization-container {
-		background: var(--tool-bg) !important;
-		color: var(--primary-color) !important;
+		background: #242425 !important;
+		color: #FFF !important;
 	}
 
 	.customizationmode-button {
-		background: var(--tab-bg) !important;
-		border-color: var(--border-color) !important;
-		color: var(--primary-color) !important;
+		background: #222225 !important;
+		border-color: #000 !important;
+		color: #FFF !important;
 	}
